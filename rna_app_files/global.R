@@ -1,6 +1,6 @@
-# Louis Hague, 14/07/23
-# Backend Server for the scRNAseq Analyser
+# Backend Functions for the scRNAseq Analyser
 
+# Imports
 # library(gdata)
 library(tools)
 library(Seurat)
@@ -29,7 +29,7 @@ load_seurat_obj <- function(path){
   # try to read in file
   tryCatch(
     {
-      obj <- readRDS(path)
+      obj <- readRDS(path) 
     },
     error = function(e) {
       errors <- c(errors, "Invalid rds file.")
@@ -42,7 +42,6 @@ load_seurat_obj <- function(path){
     errors <- c(errors, "File is not a seurat object")
     return(errors)
   }
-  
   return(obj)
 }
 
@@ -74,13 +73,4 @@ create_feature_plot <- function(obj, gene) {
       theme(plot.margin = unit(c(0, 0, 0, 0), "cm"))
   }
   return(FP)
-}
-
-create_heatmap <- function(obj) {
-  obj.markers <- FindAllMarkers(obj, only.pos = TRUE, min.pct = 0.25, logfc.threshold = 0.25)
-  obj.markers %>%
-    group_by(cluster) %>%
-    top_n(n = 10, wt = avg_log2FC) -> top10
-  heatmap <- DoHeatmap(obj, features = top10$gene) + NoLegend()
-  return(heatmap)
 }
