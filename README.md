@@ -1,4 +1,5 @@
-# The scRNAseq Analyser is an RShiny-based web application designed for analysing single-cell RNA sequencing (scRNAseq) data. It allows users to upload .rds files containing Seurat objects and provides an intuitive interface to visualise the data through UMAP plots and gene expression feature plots. The application is tailored for single-cell RNA sequencing data and simplifies the process of analyzing and exploring scRNAseq datasets interactively.
+# The scRNAseq Analyser 
+An RShiny-based web application designed for analysing single-cell RNA sequencing (scRNAseq) data. It allows users to upload .rds files containing Seurat objects and provides an intuitive interface to visualise the data through UMAP plots and gene expression feature plots. The application is tailored for single-cell RNA sequencing data and simplifies the process of analyzing and exploring scRNAseq datasets interactively.
 
 ## Features
 *File Upload: Supports uploading of .rds files (Seurat objects).
