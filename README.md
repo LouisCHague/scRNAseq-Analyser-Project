@@ -9,3 +9,6 @@ An RShiny-based web application designed for analysing single-cell RNA sequencin
 
 ## Data
 The test data used for this project is from the Seurat tutorial, comprising 2,700 single peripheral blood mononuclear cells (PBMCs) sequenced on the Illumina NextSeq 500 platform. This dataset is freely available from 10X Genomics.
+
+![nCount_RNA_UMAP](https://github.com/user-attachments/assets/cdcb72fe-1b40-46c6-a833-875d71da41d8)
+
